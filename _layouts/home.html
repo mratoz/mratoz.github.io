@@ -1,0 +1,23 @@
+---
+layout: default
+---
+<section class="home">
+  <h1>Recent Posts</h1>
+
+  <div class="post-list">
+    {% for post in site.posts %}
+      <article class="post-preview">
+        <p class="post-meta">
+          <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y-%m-%d" }}</time>
+        </p>
+        <div class="post-preview-body">
+          <h2><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h2>
+          {% if post.excerpt %}
+            <div class="post-excerpt">{{ post.excerpt | strip_html }}</div>
+          {% endif %}
+          <a class="read-more" href="{{ post.url | relative_url }}">Read more <span aria-hidden="true">→</span></a>
+        </div>
+      </article>
+    {% endfor %}
+  </div>
+</section>
