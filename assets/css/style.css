@@ -215,6 +215,8 @@ pre code { padding: 0; background: none; font-size: .8125rem; }
 .footer-inner p + p { margin-top: .5rem; }
 .footer-inner a { color: var(--muted); }
 .footer-inner a:hover { color: var(--accent); }
+.footer-license { display: flex; align-items: center; gap: .65rem; }
+.footer-license img { display: block; width: 88px; height: 31px; }
 
 .not-found { max-width: 30rem; }
 .not-found h1 { margin: 0 0 .5rem; font: 600 2rem/1.25 var(--serif); }
